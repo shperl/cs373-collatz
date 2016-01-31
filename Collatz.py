@@ -30,7 +30,35 @@ def collatz_eval (i, j) :
     return the max cycle length of the range [i, j]
     """
     # <your code>
-    return 1
+    interval = range(i, j+1)
+    max = 0
+
+    for num in interval:
+        current = collatz_cycles(num)
+        if current > max:
+            max = current
+
+    return max
+
+# -------------
+# collatz_cycles
+# -------------
+
+def collatz_cycles (i):
+    """
+    i is the integer value we are counting cycles for
+    return the cycle length of that number
+    """
+    cycles = 0
+
+    while i > 1:
+        cycles++
+        if i % 2 == 0:
+            i = i / 2
+        else:
+            i = (3 * i) + 1
+
+    return cycles
 
 # -------------
 # collatz_print
@@ -59,3 +87,5 @@ def collatz_solve (r, w) :
         i, j = collatz_read(s)
         v    = collatz_eval(i, j)
         collatz_print(w, i, j, v)
+
+        
