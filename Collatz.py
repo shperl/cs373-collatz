@@ -49,14 +49,17 @@ def collatz_cycles (i):
     i is the integer value we are counting cycles for
     return the cycle length of that number
     """
-    cycles = 0
+    cycles = 1
 
     while i > 1:
-        cycles++
+        
+        assert cycles > 0
         if i % 2 == 0:
             i = i / 2
+            cycles+=1
         else:
             i = (3 * i) + 1
+            cycles+=1
 
     return cycles
 
