@@ -6,6 +6,8 @@
 # Glenn P. Downing
 # ---------------------------
 
+lazy_cache = [0] * 1000000
+
 # ------------
 # collatz_read
 # ------------
@@ -49,18 +51,26 @@ def collatz_cycles (i):
     i is the integer value we are counting cycles for
     return the cycle length of that number
     """
+    global lazy_cache
     cycles = 1
+    temp = i
 
-    while i > 1:
+
+    if lazy_cache[i] > 0:
+        return lazy_cache[i]
+
+    while temp > 1:
         
         assert cycles > 0
-        if i % 2 == 0:
-            i = i / 2
+        if temp % 2 == 0:
+            temp = temp / 2
             cycles+=1
         else:
-            i = (3 * i) + 1
+            temp = (3 * temp) + 1
             cycles+=1
 
+    lazy_cache[i] = cycles
+    
     return cycles
 
 # -------------
