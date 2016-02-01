@@ -38,7 +38,7 @@ def collatz_eval (i, j) :
     return the max cycle length of the range [i, j]
     """
     # <your code>
-    interval = range(i, j+1)
+    interval = range(i, int(j)+1)
     max = 0
 
     for num in interval:
