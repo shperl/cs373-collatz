@@ -1,3 +1,9 @@
+commit f866ea29e9bd7c9f736a88f09828c56bfac3b9c7
+Author: Stephen Perl <shperl20@gmail.com>
+Date:   Mon Feb 1 00:46:53 2016 -0600
+
+    modified makefile to accomodate new file name, created log and pydocs
+
 commit 6ac249f04585c10339cfebd1ffcfb4edd3da843d
 Author: Stephen Perl <shperl20@gmail.com>
 Date:   Mon Feb 1 00:37:17 2016 -0600

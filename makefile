@@ -6,11 +6,13 @@ FILES :=                              \
     collatz-tests/shp425-TestCollatz.py  \
     Collatz.html                      \
     Collatz.log                       \
-    SphereCollatz.py                        \
+    Collatz.py                        \
     RunCollatz.in                     \
     RunCollatz.out                    \
+    RunCollatz.py                     \
     TestCollatz.out                   \
     TestCollatz.py
+
 
 check:
 	@not_found=0;                                 \
@@ -59,8 +61,8 @@ test: RunCollatz.tmp TestCollatz.tmp
 collatz-tests:
 	git clone https://github.com/cs373-fall-2015/collatz-tests.git
 
-Collatz.html: SphereCollatz.py
-	pydoc3 -w SphereCollatz
+Collatz.html: Collatz.py
+	pydoc3 -w Collatz
 
 Collatz.log:
 	git log > Collatz.log
