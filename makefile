@@ -6,10 +6,9 @@ FILES :=                              \
     collatz-tests/EID-TestCollatz.py  \
     Collatz.html                      \
     Collatz.log                       \
-    Collatz.py                        \
+    SphereCollatz.py                        \
     RunCollatz.in                     \
     RunCollatz.out                    \
-    RunCollatz.py                     \
     TestCollatz.out                   \
     TestCollatz.py
 
@@ -60,14 +59,14 @@ test: RunCollatz.tmp TestCollatz.tmp
 collatz-tests:
 	git clone https://github.com/cs373-fall-2015/collatz-tests.git
 
-Collatz.html: Collatz.py
+Collatz.html: SphereCollatz.py
 	pydoc3 -w Collatz
 
 Collatz.log:
 	git log > Collatz.log
 
-RunCollatz.tmp: RunCollatz.in RunCollatz.out RunCollatz.py
-	./RunCollatz.py < RunCollatz.in > RunCollatz.tmp
+RunCollatz.tmp: RunCollatz.in RunCollatz.out SphereCollatz.py
+	./SphereCollatz.py < RunCollatz.in > RunCollatz.tmp
 	diff RunCollatz.tmp RunCollatz.out
 
 TestCollatz.tmp: TestCollatz.py
