@@ -60,7 +60,7 @@ collatz-tests:
 	git clone https://github.com/cs373-fall-2015/collatz-tests.git
 
 Collatz.html: SphereCollatz.py
-	pydoc3 -w Collatz
+	pydoc3 -w SphereCollatz
 
 Collatz.log:
 	git log > Collatz.log

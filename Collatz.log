@@ -1,0 +1,77 @@
+commit 6ac249f04585c10339cfebd1ffcfb4edd3da843d
+Author: Stephen Perl <shperl20@gmail.com>
+Date:   Mon Feb 1 00:37:17 2016 -0600
+
+    added more tests cases and fixed the testcollatz file
+
+commit 039e21b930a0338ade75ed7de081190a39cf105f
+Author: Stephen Perl <shperl20@gmail.com>
+Date:   Sun Jan 31 22:52:02 2016 -0600
+
+    added test cases
+
+commit dd34e4a150ff4c0ca6c33aa3ed5fcb555c6f0387
+Author: Stephen Perl <shperl20@gmail.com>
+Date:   Sun Jan 31 22:22:15 2016 -0600
+
+    combined collatz and runcollatz to spherecollatz
+
+commit bec2373ec4fc24720c36f826e7d29442c4dbcaa0
+Author: Stephen Perl <shperl20@gmail.com>
+Date:   Sun Jan 31 22:12:52 2016 -0600
+
+    fixed test_solve values
+
+commit d0a8ce303d0aa803e991ab55d4ca47ae363d8ec2
+Author: Stephen Perl <shperl20@gmail.com>
+Date:   Sun Jan 31 22:05:30 2016 -0600
+
+    added lazy cache implementation
+
+commit 6ef42f862c4f11f0e1b6f434506c2b8c782cf73e
+Author: Stephen Perl <shperl20@gmail.com>
+Date:   Sun Jan 31 16:34:01 2016 -0600
+
+    fixed assertions in testcollatz
+
+commit cd09b60fc7be8032831879efe24a0ca6d06ad2e7
+Author: Stephen Perl <shperl20@gmail.com>
+Date:   Sun Jan 31 16:31:37 2016 -0600
+
+    fixed test cases for real numbers
+
+commit d35e3677a47f058784defbc0bea9ff8abca07a3e
+Author: Stephen Perl <shperl20@gmail.com>
+Date:   Sun Jan 31 16:12:10 2016 -0600
+
+    minor fix to collatz_cycles for minimum solution
+
+commit da63fe5769a929ff2330f8a48148c7ae94d7d435
+Author: Stephen Perl <shperl20@gmail.com>
+Date:   Sun Jan 31 15:51:30 2016 -0600
+
+    Added basic solution for Collatz
+
+commit 5621633a11e15cbd410c99f7ff2cedd2015f65da
+Author: Stephen Perl <shperl20@gmail.com>
+Date:   Sat Jan 23 16:46:40 2016 -0600
+
+    make test ran: adding .tmp files
+
+commit 9a70fd22f52f22d108101437dce2e0345aa7f1de
+Author: Stephen Perl <shperl20@gmail.com>
+Date:   Sat Jan 23 15:28:01 2016 -0600
+
+    Adding files from cs373c public repository
+
+commit 49bbc4490964c1a27796c8b1bdb5c92890e73765
+Author: Stephen Perl <shperl20@gmail.com>
+Date:   Sat Jan 23 15:06:50 2016 -0600
+
+    added gitignore file and travis.yml file
+
+commit 4d3c951eb172f2f2130fb77452b7aed1b78ae820
+Author: Stephen P <shperl@users.noreply.github.com>
+Date:   Sat Jan 23 12:10:34 2016 -0600
+
+    Initial commit
