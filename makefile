@@ -13,7 +13,6 @@ FILES :=                              \
     TestCollatz.out                   \
     TestCollatz.py
 
-
 check:
 	@not_found=0;                                 \
     for i in $(FILES);                            \
@@ -67,8 +66,8 @@ Collatz.html: Collatz.py
 Collatz.log:
 	git log > Collatz.log
 
-RunCollatz.tmp: RunCollatz.in RunCollatz.out SphereCollatz.py
-	./SphereCollatz.py < RunCollatz.in > RunCollatz.tmp
+RunCollatz.tmp: RunCollatz.in RunCollatz.out RunCollatz.py
+	./RunCollatz.py < RunCollatz.in > RunCollatz.tmp
 	diff RunCollatz.tmp RunCollatz.out
 
 TestCollatz.tmp: TestCollatz.py

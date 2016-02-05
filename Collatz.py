@@ -10,9 +10,13 @@
 # imports
 # -------
 
+
 import sys
 
 lazy_cache = [0] * 1000000
+
+
+
 
 # ------------
 # collatz_read
@@ -38,15 +42,20 @@ def collatz_eval (i, j) :
     return the max cycle length of the range [i, j]
     """
     # <your code>
-    interval = range(i, int(j)+1)
-    max = 0
+    high = int(max(i, j))
+    low = int(min(i, j))
+    global lazy_cache
+
+    interval = range(low, high+1)
+    most = 0
 
     for num in interval:
         current = collatz_cycles(num)
-        if current > max:
-            max = current
+        current = lazy_cache[num]
+        if current > most:
+            most = current
 
-    return max
+    return most
 
 # -------------
 # collatz_cycles
@@ -58,26 +67,28 @@ def collatz_cycles (i):
     return the cycle length of that number
     """
     global lazy_cache
+
     cycles = 1
     temp = i
 
-
     if lazy_cache[i] > 0:
         return lazy_cache[i]
+
 
     while temp > 1:
         
         assert cycles > 0
         if temp % 2 == 0:
-            temp = temp / 2
+            temp = temp >> 1
             cycles+=1
         else:
-            temp = (3 * temp) + 1
+            temp += (temp << 1) + 1
             cycles+=1
 
     lazy_cache[i] = cycles
     
     return cycles
+
 
 # -------------
 # collatz_print
